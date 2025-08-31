@@ -42,7 +42,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"subject\": \"Compra de prueba\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\"\r\n}"
+					"raw": "{\r\n  \"subject\": \"Compra de prueba Carolina\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\"\r\n}"
 				},
 				"url": {
 					"raw": "https://payment-api.khipu.com/v3/payments",
