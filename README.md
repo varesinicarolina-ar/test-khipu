@@ -1,9 +1,9 @@
 # 🚀 Integración de la API de Khipu
 
-En este proyecto integré la **API de Khipu** en un entorno de desarrollo, configurando las claves secretas, el webhook y probando los requests en Postman. En este documento cuento paso a paso lo que hice.
+En este proyecto probé la API de Khipu en un entorno de desarrollo, configurando las claves secretas, el webhook y realizando solicitudes directamente en Postman. En este documento explico paso a paso lo que hice.
 
 ## ⚠️ Aclaración
-Esta prueba se realizó utilizando exclusivamente **Postman** para probar la API de Khipu. No se desarrolló código en ningún lenguaje de programación.
+Esta prueba se realizó utilizando exclusivamente **Postman**. No se desarrolló código en ningún lenguaje de programación.
 _⚡ Nota: Antes de esta prueba no tenía experiencia con APIs ni con Postman. Agradezco la oportunidad de aprender mientras realizaba esta integración y de poder mostrar lo que fui aprendiendo sobre la API de Khipu._
 
 ## 📌 Descripción
