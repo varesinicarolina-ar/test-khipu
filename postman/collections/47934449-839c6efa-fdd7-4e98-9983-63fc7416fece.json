@@ -6,153 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "Notificacion",
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"id": "d8d69f79-de73-4058-9f4c-a0db8b932d21",
-						"exec": [
-							"// Generate HMAC-SHA256 signature for request\r",
-							"const secret = pm.environment.get(\"khipu_secret\");\r",
-							"const requestBody = pm.request.body.raw;\r",
-							"\r",
-							"// Function to create HMAC-SHA256 signature in Base64\r",
-							"function generateSignature(secret, requestBody) {\r",
-							"    const hash = CryptoJS.HmacSHA256(requestBody, secret);\r",
-							"    return CryptoJS.enc.Base64.stringify(hash);\r",
-							"}\r",
-							"\r",
-							"try {\r",
-							"    // Create signature and set it in the environment variable\r",
-							"    const signature = generateSignature(secret, requestBody);\r",
-							"    pm.environment.set(\"khipu_signature\", signature);\r",
-							"} catch (error) {\r",
-							"    console.error(\"Error generating khipu_signature:\", error.message);\r",
-							"}\r",
-							""
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				}
-			],
-			"id": "47934449-b11da551-fa95-465b-888a-4cfed85c6026",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "in",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "x-api-key",
-							"type": "string"
-						},
-						{
-							"key": "value",
-							"value": "e33d193c-1b41-4293-8a16-19d0288b00bd",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"subject\": \"Compra de prueba\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720",
-					"protocol": "https",
-					"host": [
-						"webhook",
-						"site"
-					],
-					"path": [
-						"aecfacf3-db45-4dfa-b66c-756fa2ddc720"
-					]
-				}
-			},
-			"response": [
-				{
-					"id": "47934449-db3abe94-5755-4eb3-9bef-2d80b2beeb2a",
-					"name": "Notificacion",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"subject\": \"Compra de prueba\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720",
-							"protocol": "https",
-							"host": [
-								"webhook",
-								"site"
-							],
-							"path": [
-								"aecfacf3-db45-4dfa-b66c-756fa2ddc720"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": null,
-					"header": [
-						{
-							"key": "server",
-							"value": "nginx"
-						},
-						{
-							"key": "content-type",
-							"value": "text/html; charset=UTF-8"
-						},
-						{
-							"key": "transfer-encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "x-request-id",
-							"value": "97684eac-7250-43ee-b0af-3feb61062a06"
-						},
-						{
-							"key": "x-token-id",
-							"value": "aecfacf3-db45-4dfa-b66c-756fa2ddc720"
-						},
-						{
-							"key": "cache-control",
-							"value": "no-cache, private"
-						},
-						{
-							"key": "date",
-							"value": "Sun, 31 Aug 2025 21:25:46 GMT"
-						}
-					],
-					"cookie": [],
-					"responseTime": null,
-					"body": "This URL has no default content configured. \n<a href=\"https://webhook.site/#!/edit/aecfacf3-db45-4dfa-b66c-756fa2ddc720\">Change response in Webhook.site</a>."
-				}
-			]
-		},
-		{
 			"name": "Cobrar",
 			"id": "47934449-1310285e-0062-436f-9ce3-b4a2980c0ab8",
 			"protocolProfileBehavior": {
@@ -300,6 +153,166 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": "{\n    \"payment_id\": \"bez9pzbytkoq\",\n    \"payment_url\": \"https://khipu.com/payment/info/bez9pzbytkoq\",\n    \"app_url\": \"khipu:///pos/bez9pzbytkoq\",\n    \"ready_for_terminal\": false,\n    \"transfer_url\": \"https://khipu.com/payment/manual/bez9pzbytkoq\",\n    \"simplified_transfer_url\": \"https://app.khipu.com/payment/simplified/bez9pzbytkoq\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Notificacion",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d8d69f79-de73-4058-9f4c-a0db8b932d21",
+						"exec": [
+							"// Generate HMAC-SHA256 signature for request\r",
+							"const secret = pm.environment.get(\"khipu_secret\");\r",
+							"const requestBody = pm.request.body.raw;\r",
+							"\r",
+							"// Function to create HMAC-SHA256 signature in Base64\r",
+							"function generateSignature(secret, requestBody) {\r",
+							"    const hash = CryptoJS.HmacSHA256(requestBody, secret);\r",
+							"    return CryptoJS.enc.Base64.stringify(hash);\r",
+							"}\r",
+							"\r",
+							"try {\r",
+							"    // Create signature and set it in the environment variable\r",
+							"    const signature = generateSignature(secret, requestBody);\r",
+							"    pm.environment.set(\"khipu_signature\", signature);\r",
+							"} catch (error) {\r",
+							"    console.error(\"Error generating khipu_signature:\", error.message);\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "47934449-bfe1e650-9bb2-4a8b-ac84-0fa69a35ed92",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "e33d193c-1b41-4293-8a16-19d0288b00bd",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"subject\": \"Compra de prueba\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720",
+					"protocol": "https",
+					"host": [
+						"webhook",
+						"site"
+					],
+					"path": [
+						"aecfacf3-db45-4dfa-b66c-756fa2ddc720"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "47934449-8d109b44-04b0-411c-a500-d1e77694ad37",
+					"name": "Notificacion",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"subject\": \"Compra de prueba\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720",
+							"protocol": "https",
+							"host": [
+								"webhook",
+								"site"
+							],
+							"path": [
+								"aecfacf3-db45-4dfa-b66c-756fa2ddc720"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "server",
+							"value": "nginx",
+							"uuid": "76fe768b-1e8e-4ae9-8338-a8616eee2a89"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=UTF-8",
+							"uuid": "96679a82-d1e5-4e01-82c3-87f4aa556b34"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"uuid": "e97045f4-a606-42a3-8ebe-748ee4719c34"
+						},
+						{
+							"key": "x-request-id",
+							"value": "97684eac-7250-43ee-b0af-3feb61062a06",
+							"uuid": "7986650a-0601-4d79-96cb-165ba9e2b2a4"
+						},
+						{
+							"key": "x-token-id",
+							"value": "aecfacf3-db45-4dfa-b66c-756fa2ddc720",
+							"uuid": "c14ce72d-fec1-49d4-91c7-1c546171f073"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache, private",
+							"uuid": "9bda1af7-d99e-4054-a5dc-988ec0b310e9"
+						},
+						{
+							"key": "date",
+							"value": "Sun, 31 Aug 2025 21:25:46 GMT",
+							"uuid": "d3d6d86d-a20e-4584-8fe5-1e6f3f7503ec"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"responseTime": null,
+					"body": "This URL has no default content configured. \n<a href=\"https://webhook.site/#!/edit/aecfacf3-db45-4dfa-b66c-756fa2ddc720\">Change response in Webhook.site</a>."
 				}
 			]
 		}
