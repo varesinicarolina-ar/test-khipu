@@ -202,6 +202,20 @@
 						"type": "text/javascript",
 						"packages": {}
 					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "0c757125-8bee-4f37-9796-1e8e2a5aea61",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
 				}
 			],
 			"id": "47934449-bfe1e650-9bb2-4a8b-ac84-0fa69a35ed92",
