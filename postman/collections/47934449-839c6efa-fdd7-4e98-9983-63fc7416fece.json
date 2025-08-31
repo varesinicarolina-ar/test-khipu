@@ -238,7 +238,7 @@
 			},
 			"response": [
 				{
-					"id": "47934449-8d109b44-04b0-411c-a500-d1e77694ad37",
+					"id": "47934449-52a789f7-0bf0-40c6-bbe8-c9f2ab841228",
 					"name": "Notificacion",
 					"originalRequest": {
 						"method": "POST",
@@ -266,51 +266,38 @@
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": "",
+					"_postman_previewlanguage": null,
 					"header": [
 						{
 							"key": "server",
-							"value": "nginx",
-							"uuid": "76fe768b-1e8e-4ae9-8338-a8616eee2a89"
+							"value": "nginx"
 						},
 						{
 							"key": "content-type",
-							"value": "text/html; charset=UTF-8",
-							"uuid": "96679a82-d1e5-4e01-82c3-87f4aa556b34"
+							"value": "text/html; charset=UTF-8"
 						},
 						{
 							"key": "transfer-encoding",
-							"value": "chunked",
-							"uuid": "e97045f4-a606-42a3-8ebe-748ee4719c34"
+							"value": "chunked"
 						},
 						{
 							"key": "x-request-id",
-							"value": "97684eac-7250-43ee-b0af-3feb61062a06",
-							"uuid": "7986650a-0601-4d79-96cb-165ba9e2b2a4"
+							"value": "965f25ed-e1f0-48b2-be29-bbc4e36f16bd"
 						},
 						{
 							"key": "x-token-id",
-							"value": "aecfacf3-db45-4dfa-b66c-756fa2ddc720",
-							"uuid": "c14ce72d-fec1-49d4-91c7-1c546171f073"
+							"value": "aecfacf3-db45-4dfa-b66c-756fa2ddc720"
 						},
 						{
 							"key": "cache-control",
-							"value": "no-cache, private",
-							"uuid": "9bda1af7-d99e-4054-a5dc-988ec0b310e9"
+							"value": "no-cache, private"
 						},
 						{
 							"key": "date",
-							"value": "Sun, 31 Aug 2025 21:25:46 GMT",
-							"uuid": "d3d6d86d-a20e-4584-8fe5-1e6f3f7503ec"
+							"value": "Sun, 31 Aug 2025 22:01:19 GMT"
 						}
 					],
-					"cookie": [
-						{
-							"expires": "Invalid Date",
-							"domain": "",
-							"path": ""
-						}
-					],
+					"cookie": [],
 					"responseTime": null,
 					"body": "This URL has no default content configured. \n<a href=\"https://webhook.site/#!/edit/aecfacf3-db45-4dfa-b66c-756fa2ddc720\">Change response in Webhook.site</a>."
 				}
