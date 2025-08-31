@@ -7,6 +7,36 @@
 	"item": [
 		{
 			"name": "Notificacion",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d8d69f79-de73-4058-9f4c-a0db8b932d21",
+						"exec": [
+							"// Generate HMAC-SHA256 signature for request\r",
+							"const secret = pm.environment.get(\"khipu_secret\");\r",
+							"const requestBody = pm.request.body.raw;\r",
+							"\r",
+							"// Function to create HMAC-SHA256 signature in Base64\r",
+							"function generateSignature(secret, requestBody) {\r",
+							"    const hash = CryptoJS.HmacSHA256(requestBody, secret);\r",
+							"    return CryptoJS.enc.Base64.stringify(hash);\r",
+							"}\r",
+							"\r",
+							"try {\r",
+							"    // Create signature and set it in the environment variable\r",
+							"    const signature = generateSignature(secret, requestBody);\r",
+							"    pm.environment.set(\"khipu_signature\", signature);\r",
+							"} catch (error) {\r",
+							"    console.error(\"Error generating khipu_signature:\", error.message);\r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "47934449-b11da551-fa95-465b-888a-4cfed85c6026",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
