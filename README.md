@@ -4,7 +4,7 @@ En este proyecto probé la API de Khipu en un entorno de desarrollo, configurand
 
 ## ⚠️ Aclaración
 Esta prueba se realizó utilizando exclusivamente **Postman**. No se desarrolló código en ningún lenguaje de programación.
-_⚡ Nota: Antes de esta prueba no tenía experiencia con APIs ni con Postman. Agradezco la oportunidad de aprender mientras realizaba esta integración y de poder mostrar lo que fui aprendiendo sobre la API de Khipu._
+_Nota: Antes de esta prueba no tenía experiencia con APIs ni con Postman. Agradezco la oportunidad de aprender mientras realizaba esta integración y de poder mostrar lo que fui aprendiendo sobre la API de Khipu._
 
 ## 📌 Descripción
 
