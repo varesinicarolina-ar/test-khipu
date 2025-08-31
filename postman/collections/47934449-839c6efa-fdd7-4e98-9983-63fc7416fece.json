@@ -300,6 +300,101 @@
 					"cookie": [],
 					"responseTime": null,
 					"body": "{\n    \"payment_id\": \"spywif8adpn8\",\n    \"payment_url\": \"https://khipu.com/payment/info/spywif8adpn8\",\n    \"app_url\": \"khipu:///pos/spywif8adpn8\",\n    \"ready_for_terminal\": false,\n    \"transfer_url\": \"https://khipu.com/payment/manual/spywif8adpn8\",\n    \"simplified_transfer_url\": \"https://app.khipu.com/payment/simplified/spywif8adpn8\"\n}"
+				},
+				{
+					"id": "47934449-9aaf28b6-efad-426c-a7e7-9ec3d9937d42",
+					"name": "Cobrar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"subject\": \"Compra de prueba Carolina\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\"\r\n}"
+						},
+						"url": {
+							"raw": "https://payment-api.khipu.com/v3/payments",
+							"protocol": "https",
+							"host": [
+								"payment-api",
+								"khipu",
+								"com"
+							],
+							"path": [
+								"v3",
+								"payments"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 31 Aug 2025 21:54:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "324"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Location",
+							"value": "https://khipu.com/api/2.0/payments/bez9pzbytkoq/index"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "JSESSIONID=F7226EF36A33189CC3950C19DF1F9025; Path=/; Secure; HttpOnly"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Krakend",
+							"value": "Version undefined"
+						},
+						{
+							"key": "X-Krakend-Completed",
+							"value": "false"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"payment_id\": \"bez9pzbytkoq\",\n    \"payment_url\": \"https://khipu.com/payment/info/bez9pzbytkoq\",\n    \"app_url\": \"khipu:///pos/bez9pzbytkoq\",\n    \"ready_for_terminal\": false,\n    \"transfer_url\": \"https://khipu.com/payment/manual/bez9pzbytkoq\",\n    \"simplified_transfer_url\": \"https://app.khipu.com/payment/simplified/bez9pzbytkoq\"\n}"
 				}
 			]
 		}
