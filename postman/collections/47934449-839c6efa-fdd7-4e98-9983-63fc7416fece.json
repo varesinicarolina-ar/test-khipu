@@ -6,61 +6,6 @@
 	},
 	"item": [
 		{
-			"name": "Cobrar",
-			"id": "47934449-3a7eec24-bd24-4c3c-a2e5-78376ab1f69e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "in",
-							"value": "header",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "x-api-key",
-							"type": "string"
-						},
-						{
-							"key": "value",
-							"value": "e33d193c-1b41-4293-8a16-19d0288b00bd",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n  \"subject\": \"Compra de prueba\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\",\r\n  \"notify_api_version\": \"3.0\"\r\n}"
-				},
-				"url": {
-					"raw": "https://payment-api.khipu.com/v3/payments",
-					"protocol": "https",
-					"host": [
-						"payment-api",
-						"khipu",
-						"com"
-					],
-					"path": [
-						"v3",
-						"payments"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Notificacion",
 			"id": "47934449-b11da551-fa95-465b-888a-4cfed85c6026",
 			"protocolProfileBehavior": {
