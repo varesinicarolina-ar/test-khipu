@@ -7,6 +7,22 @@
 	"item": [
 		{
 			"name": "Cobrar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e17d8ea7-b8c4-440f-a20b-12ce59e25aec",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "47934449-1310285e-0062-436f-9ce3-b4a2980c0ab8",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
