@@ -99,16 +99,14 @@
 					}
 				},
 				"url": {
-					"raw": "https://khipu.com/payment/info/muuq0qrxf8et",
+					"raw": "https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720",
 					"protocol": "https",
 					"host": [
-						"khipu",
-						"com"
+						"webhook",
+						"site"
 					],
 					"path": [
-						"payment",
-						"info",
-						"muuq0qrxf8et"
+						"aecfacf3-db45-4dfa-b66c-756fa2ddc720"
 					]
 				}
 			},
