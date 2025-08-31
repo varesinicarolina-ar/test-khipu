@@ -55,7 +55,72 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"id": "47934449-db3abe94-5755-4eb3-9bef-2d80b2beeb2a",
+					"name": "Notificacion",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"subject\": \"Compra de prueba\",\r\n  \"amount\": 1000,\r\n  \"currency\": \"CLP\",\r\n  \"transaction_id\": \"pedido-1234\",\r\n  \"return_url\": \"https://tu-sitio.com/exito\",\r\n  \"cancel_url\": \"https://tu-sitio.com/cancelado\",\r\n  \"notify_url\": \"https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://webhook.site/aecfacf3-db45-4dfa-b66c-756fa2ddc720",
+							"protocol": "https",
+							"host": [
+								"webhook",
+								"site"
+							],
+							"path": [
+								"aecfacf3-db45-4dfa-b66c-756fa2ddc720"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "server",
+							"value": "nginx"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "x-request-id",
+							"value": "97684eac-7250-43ee-b0af-3feb61062a06"
+						},
+						{
+							"key": "x-token-id",
+							"value": "aecfacf3-db45-4dfa-b66c-756fa2ddc720"
+						},
+						{
+							"key": "cache-control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "date",
+							"value": "Sun, 31 Aug 2025 21:25:46 GMT"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "This URL has no default content configured. \n<a href=\"https://webhook.site/#!/edit/aecfacf3-db45-4dfa-b66c-756fa2ddc720\">Change response in Webhook.site</a>."
+				}
+			]
 		},
 		{
 			"name": "Cobrar",
