@@ -332,6 +332,18 @@
 					"body": "This URL has no default content configured. \n<a href=\"https://webhook.site/#!/edit/aecfacf3-db45-4dfa-b66c-756fa2ddc720\">Change response in Webhook.site</a>."
 				}
 			]
+		},
+		{
+			"name": "New Request",
+			"id": "47934449-27952cc0-18ba-4d02-82c7-af2acd319108",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"auth": {
